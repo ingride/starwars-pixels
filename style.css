@@ -23,7 +23,7 @@ body {
 
 .pixel-text {
   position: absolute;
-  margin-top: 60px;
+  margin-top: 10%;
   left: 50%;
   width: 100%;
   text-align: center;
@@ -34,7 +34,7 @@ body {
 
 .pixel-link {
   position: absolute;
-  margin-top: 50px;
+  margin-top: 10%;
   margin-bottom: 50px;
   left: 50%;
   width: 100%;
@@ -46,14 +46,14 @@ body {
 
 .pixel-credit {
   position: absolute;
-  margin-top: 70px;
+  margin-top: 20%;
   left: 50%;
   width: 100%;
   text-align: center;
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', Fallback, sans-serif;
   color: #0e3bee;
-  font-size: 7px; }
+  font-size: 9px; }
 
 a {
   text-decoration: none; }
