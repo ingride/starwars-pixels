@@ -71,9 +71,9 @@ body{
 
 .pixel-block {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -30%);
     &_pixelized--leia {
         height: $size*length($pixel-leia);
         width: $size*length(nth($pixel-leia, 1));
@@ -118,7 +118,7 @@ body{
 
 .pixel-credit {
     position: absolute;
-    margin-top: 20%;
+    margin-top: 30%;
     left: 50%;
     width: 100%;
     text-align: center;

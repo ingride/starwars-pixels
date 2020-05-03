@@ -6,9 +6,9 @@ body {
 
 .pixel-block {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -20%); }
+  transform: translate(-50%, -30%); }
   .pixel-block_pixelized--leia {
     height: 540px;
     width: 500px; }
@@ -47,7 +47,7 @@ body {
 
 .pixel-credit {
   position: absolute;
-  margin-top: 20%;
+  margin-top: 30%;
   left: 50%;
   width: 100%;
   text-align: center;
