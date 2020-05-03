@@ -26,6 +26,7 @@ body {
   margin-top: 10%;
   left: 50%;
   width: 100%;
+  text-align: center;
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', Fallback, sans-serif;
   color: #0e3bee;
@@ -34,8 +35,10 @@ body {
 .pixel-link {
   position: absolute;
   margin-top: 15%;
+  margin-bottom: 50px;
   left: 50%;
   width: 100%;
+  text-align: center;
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', Fallback, sans-serif;
   color: #0e3bee;
