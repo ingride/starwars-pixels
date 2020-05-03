@@ -15,7 +15,7 @@ $colors: (
 );
 
 //  Pixel Size
-$size: 12px !default;
+$size: 14px !default;
 
 //  The matrix for the pixel art
 $pixel-leia: ( 
@@ -71,9 +71,9 @@ body{
 
 .pixel-block {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
     &_pixelized--leia {
         height: $size*length($pixel-leia);
         width: $size*length(nth($pixel-leia, 1));
@@ -92,13 +92,14 @@ body{
 
 .pixel-text {
     position: absolute;
-    margin-top: 30px;
+    margin-top: 60px;
     left: 50%;
     width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
     font-family: 'Press Start 2P', Fallback, sans-serif;
     color: rgb(14,59,238);
+    font-size: 25px;
 }
 
 .pixel-link {
