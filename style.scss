@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('font/PressStart2P-Regular.ttf')
+}
+//  Color Map
+$colors: ( 
+  'o': transparent, 
+  'b' : '#000000',
+  'h' : '#8C4600',
+  's': '#EFDECD',
+  'e': '#D2691E',
+  'c': '#FFB7C5',
+  'w': '#FFFFFF',
+  'g': '#555555'
+);
+
+//  Pixel Size
+$size: 12px !default;
+
+//  The matrix for the pixel art
+$pixel-leia: ( 
+        (o o o o o o o o o b b b b b b b o o o o o o o o o ) 
+        (o o o o o o o b b h h h h h h h b b o o o o o o o ) 
+        (o o o o o o b h h h h h h h h h h h b o o o o o o ) 
+        (o o o o o b h h h h h h h h h h h h h b o o o o o ) 
+        (o b b b o b h h h h h h h h h h h h h b o b b b o ) 
+        (b h h h b h h h h h h h h h h h h h h h b h h h b ) 
+        (b h h h b h h h h h h h h h h h h h h h b h h h b ) 
+        (b h h h h h h h h h h h s h h h h h h h h h h h b ) 
+        (b h h h h h h h h h h s s s h h h h h h h h h h b ) 
+        (b h h h h h h h h h s s s s s h h h h h h h h h b ) 
+        (b h h h h h h s s s s s s s s s s s h h h h h h b ) 
+        (b h h h h h h s b b s s s s s b b s h h h h h h b ) 
+        (b h h h b h h s b b s s s s s b b s h h b h h h b ) 
+        (o b h h b h h s e e s s s s s e e s h h b h h b o ) 
+        (o o b b o b h c c s s s s s s s c c h b o b b o o ) 
+        (o o o o o o b b s s s s s s s s s b b o o o o o o ) 
+        (o o o o o o o b b b b b s b b b b b o o o o o o o ) 
+        (o b b b b o o o b w w w w w w w b o o o o o o o o ) 
+        (b g g g g b o b w w w w w w w w w b o o o o o o o ) 
+        (o b b b g b b w w g w w w w w g w w b o o o o o o ) 
+        (o o o o b s w w g w w w w w w w g w b o o o o o o ) 
+        (o o o o b b b b b g g g g g g g b b s b o o o o o ) 
+        (o o o o o o o b w w w w w w w w w b b o o o o o o ) 
+        (o o o o o o b w w w w w w w w w w w b o o o o o o ) 
+        (o o o o o o b w w w w w w w w w w w b o o o o o o ) 
+        (o o o o o b w w w w w w w w w w w w w b o o o o o ) 
+        (o o o o o o b b b b w b b b w b b b b o o o o o o )      
+);
+
+//  Read matrix and pixelize
+@function pixelize($matrix, $size) {
+    $sh: '';
+    $rows: length($matrix);
+    @for $row from 1 through $rows {
+        $row-num: nth($matrix, $row);
+        @for $col from 1 through length($row-num) {
+            $dot: nth($row-num, $col);
+            $sh: $sh + ($size*$col) + ' ' + ($size*$row) + ' ' + map-get($colors, $dot); //  Add a comma after each drop-shadow except the last one
+            @if not ($col==length($row-num) and $row==$rows) {
+                $sh: $sh + ',';
+            }
+        }
+    }
+    @return unquote($sh);
+}
+
+body{
+  background-color: rgb(238,227,225);
+}
+
+.pixel-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &_pixelized--leia {
+        height: $size*length($pixel-leia);
+        width: $size*length(nth($pixel-leia, 1));
+        &::after {
+            top: -$size;
+            left: -$size;
+            height: $size;
+            width: $size;
+            content: '';
+            position: absolute;
+            box-shadow: pixelize($pixel-leia, $size);
+        }
+    }
+}
+
+
+.pixel-text {
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: 'Press Start 2P', Fallback, sans-serif;
+    color: rgb(14,59,238);
+}
+
+.pixel-link {
+    position: absolute;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: 'Press Start 2P', Fallback, sans-serif;
+    color: rgb(14,59,238);
+    font-size: 6px;
+}
+
+.pixel-credit {
+    position: absolute;
+    margin-top: 70px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: 'Press Start 2P', Fallback, sans-serif;
+    color: rgb(14,59,238);
+    font-size: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: inherit;
+    border-bottom: 1px blue dotted;
+}
