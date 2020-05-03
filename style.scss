@@ -15,7 +15,7 @@ $colors: (
 );
 
 //  Pixel Size
-$size: 14px !default;
+$size: 20px !default;
 
 //  The matrix for the pixel art
 $pixel-leia: ( 
@@ -99,7 +99,7 @@ body{
     transform: translate(-50%, -50%);
     font-family: 'Press Start 2P', Fallback, sans-serif;
     color: rgb(14,59,238);
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .pixel-link {
@@ -112,7 +112,7 @@ body{
     transform: translate(-50%, -50%);
     font-family: 'Press Start 2P', Fallback, sans-serif;
     color: rgb(14,59,238);
-    font-size: 8px;
+    font-size: 11px;
 }
 
 .pixel-credit {
@@ -124,7 +124,7 @@ body{
     transform: translate(-50%, -50%);
     font-family: 'Press Start 2P', Fallback, sans-serif;
     color: rgb(14,59,238);
-    font-size: 6px;
+    font-size: 7px;
 }
 
 a {
@@ -132,5 +132,5 @@ a {
 }
 a:link, a:visited {
     color: inherit;
-    border-bottom: 1px blue dotted;
+    border-bottom: 2px blue dotted;
 }
