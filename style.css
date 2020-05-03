@@ -41,7 +41,7 @@ body {
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', Fallback, sans-serif;
   color: #0e3bee;
-  font-size: 6px; }
+  font-size: 8px; }
 
 .pixel-credit {
   position: absolute;
@@ -52,7 +52,7 @@ body {
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', Fallback, sans-serif;
   color: #0e3bee;
-  font-size: 5px; }
+  font-size: 6px; }
 
 a {
   text-decoration: none; }
